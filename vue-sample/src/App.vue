@@ -1,42 +1,18 @@
 <template>
   <div id="app" class="app">
-    <ChartTypeKLineChart/>
-    <TechnicalIndicatorKLineChart/>
-    <CustomThemeKLineChart/>
-    <LanguageKLineChart/>
-    <TooltipKLineChart/>
-    <TimezoneKLineChart/>
-    <DrawGraphicMarkKLineChart/>
-    <CustomCandleMarkKLineChart/>
-    <LoadMoreKLineChart/>
     <UpdateKLineChart/>
   </div>
 </template>
 
 <script>
-import ChartTypeKLineChart from '@/components/ChartTypeKLineChart'
-import TechnicalIndicatorKLineChart from '@/components/TechnicalIndicatorKLineChart'
-import CustomThemeKLineChart from '@/components/CustomThemeKLineChart'
-import LanguageKLineChart from '@/components/LanguageKLineChart'
-import TooltipKLineChart from '@/components/TooltipKLineChart'
-import TimezoneKLineChart from '@/components/TimezoneKLineChart'
-import DrawGraphicMarkKLineChart from '@/components/DrawGraphicMarkKLineChart'
-import CustomCandleMarkKLineChart from '@/components/CustomCandleMarkKLineChart'
-import LoadMoreKLineChart from '@/components/LoadMoreKLineChart'
 import UpdateKLineChart from '@/components/UpdateKLineChart'
+import 'intl';
+import 'intl/locale-data/jsonp/en';
+
 
 export default {
   name: 'App',
   components: {
-    ChartTypeKLineChart,
-    TechnicalIndicatorKLineChart,
-    CustomThemeKLineChart,
-    LanguageKLineChart,
-    TooltipKLineChart,
-    TimezoneKLineChart,
-    DrawGraphicMarkKLineChart,
-    CustomCandleMarkKLineChart,
-    LoadMoreKLineChart,
     UpdateKLineChart
   }
 }
