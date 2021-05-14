@@ -30,7 +30,7 @@
       // kLineChart.applyNewData(generatedKLineDataList())
       // updateData()
       /* eslint-disable */
-
+      kLineChart.createTechnicalIndicator("MA", false, { id: 'candle_pane' })
         window["onReceiveData"] = function onReceiveData(dataStr) {
           console.log("onReceiveData:" + dataStr);
           let data = JSON.parse(dataStr);
@@ -49,6 +49,12 @@
     },
     methods: {
 
+    },
+    data: function () {
+      return {
+        mainTechnicalIndicatorTypes: ['MA', 'EMA', 'SAR'],
+        subTechnicalIndicatorTypes: ['VOL', 'MACD', 'KDJ']
+      }
     },
     destroyed: function () {
       dispose('update-k-line')
