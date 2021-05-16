@@ -36,28 +36,28 @@ export default {
   }
 
   .app {
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
+    /*flex-direction: row;*/
     justify-content: center;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 0px;
   }
   .k-line-chart-container {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 0px;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     background-color: #1f2126;
-    width: 620px;
-    height: 440px;
-    padding: 16px 6px 16px 16px;
+    width: 480px;
+    height: 340px;
+    padding: 0px 0px 0px 0px;
   }
 
   .k-line-chart-title {
     margin: 0;
     color: #E6E8EA;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 
   .k-line-chart {

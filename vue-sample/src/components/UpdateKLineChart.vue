@@ -1,5 +1,5 @@
 <template>
-  <Layout title="实时更新">
+  <Layout v-bind:title="title">
     <div id="update-k-line" class="k-line-chart"/>
   </Layout>
 </template>
@@ -32,7 +32,7 @@
       /* eslint-disable */
       kLineChart.createTechnicalIndicator("MA", false, { id: 'candle_pane' })
         window["onReceiveData"] = function onReceiveData(dataStr) {
-          console.log("onReceiveData:" + dataStr);
+          // console.log("onReceiveData:" + dataStr);
           let data = JSON.parse(dataStr);
           kLineChart.updateData(data);
         }
@@ -40,10 +40,15 @@
         window["onReceiveDataInit"] = function onReceiveDataInit(dataStr) {
           // console.log("onReceiveDataInit:" + dataStr);
           let data = JSON.parse(dataStr);
+
+          kLineChart.clearData();
           kLineChart.applyNewData(data);
 
-        }
-
+        };
+        let thisData = this;
+        window['setTitle']=function (title) {
+          thisData.title=title;
+        };
 
 
     },
@@ -52,6 +57,7 @@
     },
     data: function () {
       return {
+        title:"####",
         mainTechnicalIndicatorTypes: ['MA', 'EMA', 'SAR'],
         subTechnicalIndicatorTypes: ['VOL', 'MACD', 'KDJ']
       }
